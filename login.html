@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(1, 255, 170);
+                padding-left: 40px;
+                padding-top: 200px;
+                color: #fff;
+                font-size: x-large;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: brown;
+            }
+            .sai {
+            border: 5px solid red;
+            background-color: rgba(215, 197, 197,0.5);
+            width: 400px;
+            box-sizing: border-box;
+            font-size: 20px;
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+        <title>PVM Tourisms</title>
+        <script>
+            function loginValidations()
+            {
+                var uname = document.myform.username.value;
+                var password = document.myform.password.value;
+                if(uname==null || uname=="")
+                {
+                    alert("Name cant be blank")
+                    return false;
+                }
+                else if(password.length<6)
+                {
+                    alert("Password must be 6 letters")
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body background="gofirst.jpg">
+        <div class="sai">
+        <h2 style="padding-right: 5px;">Login Page</h2>
+        <form name= "myform" action="loginsuccessful.html" onsubmit="return loginValidations(this)">
+            Username : <input type="text" name="username">  <br><br>
+            Password : <input type="password" name="password">  <br><br>
+                    <input type="submit" value="submit" style="text-align: center; padding-right: 250px;">
+        </form>
+        </div>
+    </body>
+</html>
